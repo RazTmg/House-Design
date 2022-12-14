@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>House Design</title>
+  </head>
+  <body>
+    <header id="header">
+      <nav class="navbar">
+        <a href="#" class="logo">!Nt9rior</a>
+        <input type="checkbox" id="check" />
+        <label for="check" class="menu-icons">
+          <i class="fa-sharp fa-solid fa-bars"></i>
+        </label>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="#">BEDROOM</a></li>
+          <li><a href="#">DINING</a></li>
+          <li><a href="#">KITCHEN</a></li>
+          <li><a href="contact.html">CONTACT ME</a></li>
+        </ul>
+      </nav>
+      <div class="content2">
+        <h3 class="">Login Here</h3>
+        <form name="myform" onsubmit="return datavalidation()">
+          <input
+            type="email"
+            placeholder="Enter Your Email"
+            name="Email"
+          /><br />
+          <input
+            type="password"
+            placeholder="Enter Your password"
+            name="Password"
+          /><br />
+          <input type="submit" id="btn" />
+          <div class="para">
+            <p>Don't have a account?</p>
+            <a href="#">Sign up</a> here
+            <p style="margin-top: 0.5rem">Log in with</p>
+          </div>
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </form>
+      </div>
+    </header>
+
+    <script>
+      function datavalidation() {
+        document
+          .getElementById("btn")
+          .addEventListener("click", function (event) {
+            event.preventDefault;
+          });
+        let email = document.myform.Email.value;
+        let password = document.myform.Password.value;
+        if (email == "") {
+          alert("Please Enter Your Email");
+          return false;
+        } else if (password == "") {
+          alert("please Enter Your Password");
+          return false;
+        } else if (isNaN(password)) {
+          alert("please enter Numeric value only");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

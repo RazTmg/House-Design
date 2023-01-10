@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Expendable image gallery</title>
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        background-color: #fafafa;
+      }
+      .gallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .img-box {
+        width: 100px;
+        height: 500px;
+        background: url(brp/lens.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 50px;
+        position: relative;
+        transition: all 0.5s ease;
+      }
+      .img-box:nth-child(2) {
+        background: url(brp/nature.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .img-box:nth-child(3) {
+        background: url(brp/rose.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .img-box:nth-child(4) {
+        background: url(brp/sea.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .img-box h3 {
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+        font-size: 20px;
+        opacity: 0;
+        transition: 0.3s ease;
+      }
+      .img-box:hover {
+        width: 300px;
+        cursor: pointer;
+      }
+      .img-box:hover h3 {
+        opacity: 1;
+        bottom: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="gallery">
+        <div class="img-box"><h3>Lens</h3></div>
+        <div class="img-box"><h3>Nature</h3></div>
+        <div class="img-box"><h3>Rose</h3></div>
+        <div class="img-box"><h3>Sea</h3></div>
+      </div>
+    </div>
+  </body>
+</html>
